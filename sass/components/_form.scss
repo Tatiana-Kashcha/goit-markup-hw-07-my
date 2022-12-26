@@ -1,0 +1,188 @@
+/* ---Блок form--- */
+
+.form__field {
+    color: var(--primary-text-color);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+.form__field--last {
+    margin-bottom: 20px;
+}
+
+.form__input {
+    margin: 0;
+    padding-left: 42px;
+    padding-right: 16px;
+    height: 40px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+
+    margin-top: 4px;
+
+    transition: border-color 250ms var(--cubic-bezier),
+    outline 250ms var(--cubic-bezier);
+}
+
+.form__input:focus {
+    border-color: var(--primary-accent-color);
+    outline: 0.1px var(--primary-accent-color);;
+    outline-style: solid;
+}
+
+.form__input:focus + .form__icon {
+    fill: var(--primary-accent-color);
+}
+
+.form__icon {
+    fill: var(--title-text-color);
+    position: absolute;
+    top: 50%;
+    margin-left: 12px;
+
+    transition: fill 250ms var(--cubic-bezier);
+}
+
+.form__textarea {
+    padding: 12px 16px;
+    height: 120px;
+    margin-top: 4px;
+
+    resize: none;
+
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+
+    transition: border-color 250ms var(--cubic-bezier),
+    outline 250ms var(--cubic-bezier);
+}
+
+.form__textarea:focus {
+    border-color: var(--primary-accent-color);
+    outline: 0.1px var(--primary-accent-color);
+    outline-style: solid;
+}
+
+.form__textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--form-placeholder-color);
+}
+
+.form__check {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.form__label-check {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    padding-left: 35px;
+}
+
+.form__input-check {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.form__input-check:checked + .form__icon-check {
+    background-color: var(--primary-accent-color);
+    border: transparent;
+}
+
+.form__icon-check {
+    margin-left: 12px;
+    fill: var(--accent-text-color);
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    background-color: var(--primary-background-color);
+
+    position: absolute;
+    left: 0;
+
+    transition: background-color 250ms var(--cubic-bezier), 
+    border 250ms var(--cubic-bezier);
+}
+
+.form__contract-check {
+    position: relative;
+    margin-left: 5px;
+}
+
+.form__link-contract {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-accent-color);
+    text-decoration: none;
+}
+
+.form__link-contract::after {
+    content: "";
+    display: block;
+    height: 0.5px;
+    width: 100%;
+    background-color: var(--primary-accent-color);
+    position: absolute;
+    left: 0;
+    bottom: 5.5px;  
+}
+
+.form__bloc-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.form__btn-submit {
+    color: var(--accent-text-color);
+    background-color: var(--primary-accent-color);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    font-family: inherit;
+    border: none;
+
+    min-width: 200px;
+    padding: 10px 52px;
+    
+
+    box-shadow: 0px 4px 4px var(--btn-shadow-color);
+
+    transition: background-color 250ms var(--cubic-bezier);
+}
+
+.form__btn-submit:hover {
+    background-color: var(--secondary-accent-color);
+}

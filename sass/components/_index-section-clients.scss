@@ -1,0 +1,53 @@
+/* Секція "clients" */
+
+.clients-title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    list-style: none;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.clients-list__item {
+    display: flex; 
+}
+
+.clients-list__item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.clients-list__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--svg-primary-color);
+    border-radius: 4px;
+    color: var(--svg-primary-color) ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+    color 250ms var(--cubic-bezier), 
+    border-color 250ms var(--cubic-bezier);
+}
+
+.clients-list__link:hover, .clients-list__link:focus {
+    color: var(--primary-accent-color);
+    border-color: var(--primary-accent-color);
+}
+
+.clients-list__icon {
+    display: block;
+    fill: currentColor;
+}
